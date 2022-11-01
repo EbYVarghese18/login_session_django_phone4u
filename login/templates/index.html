@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<section class="vh-100" style="background-color: #000000;">
+    <div class="container py-5 h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card mx-auto shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <h2 class="m-3">PHONE4U</h2>
+                        <h3 class="m-5">Logged in successfully!!!!</h3>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">
+                            <a class="text-white" href="{% url 'signout' %}">Logout</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

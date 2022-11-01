@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+signin
+{% endblock %}
+
+{% block content %}
+
+<section class="vh-100" style="background-color: #000000;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card mx-auto shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h2>WELCOME TO PHONE4U</h2>
+            <h5 class="mb-4 mt-5">Sign in</h5>
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="form-outline mb-4">
+                <input type="text" name="username" id="typeEmailX-2" class="form-control form-control-lg"
+                  placeholder="Enter your email id" />
+              </div>
+              <div class="form-outline mb-4">
+                <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg"
+                  placeholder="Enter your password"/>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            </form>
+
+            {% if messages %}
+            <div class="alert alert-danger mt-5" role="alert">
+            {% for e in messages %}
+            {{ e }}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}
