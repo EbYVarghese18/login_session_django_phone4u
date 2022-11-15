@@ -22,22 +22,22 @@ signin
               </div>
               <div class="form-outline mb-4">
                 <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg"
-                  placeholder="Enter your password"/>
+                  placeholder="Enter your password" />
               </div>
               <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
             </form>
 
             {% if messages %}
             <div class="alert alert-danger mt-5" role="alert">
-            {% for e in messages %}
-            {{ e }}
-            {% endfor %}
-          </div>
-          {% endif %}
+              {% for e in messages %}
+              {{ e }}
+              {% endfor %}
+            </div>
+            {% endif %}
 
+          </div>
         </div>
       </div>
-    </div>
 </section>
 
 {% endblock %}
